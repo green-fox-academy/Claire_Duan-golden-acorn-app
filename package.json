@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/green-fox-academy/Claire_Duan-golden-acorn-app#readme",
   "dependencies": {
+    "arrow-keys-react": "^1.0.6",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
