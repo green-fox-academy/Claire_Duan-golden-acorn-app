@@ -45,8 +45,7 @@ class SimpleGoldenAcornApp extends React.Component {
     const { value } = this.state;
     return (
       <div>
-        {/* <Button name="Buy One" callback={this.changeValue(1)} /> */}
-        <Button name="Buy One" callback={this.buyOne} />
+        <Button name="Buy One" callback={this.changeValue(1)} />
         <Display>
           {value}
         </Display>
