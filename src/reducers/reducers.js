@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import acorn from './acorns';
+import amount from './acorns';
 
 const rootReducer = combineReducers({
-  amount: acorn,
+  amount,
 });
 
 export default rootReducer;
