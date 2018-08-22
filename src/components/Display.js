@@ -2,16 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Display(props) {
-  const { children } = props;
+  const { amount } = props;
   return (
     <p>
-      {children}
-    </p>
-  );
+      { amount }
+    </p>);
 }
 
 Display.propTypes = {
-  children: PropTypes.number.isRequired,
+  amount: PropTypes.number.isRequired,
 };
 
 export default Display;

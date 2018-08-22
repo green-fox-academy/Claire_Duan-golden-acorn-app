@@ -47,7 +47,9 @@ class SimpleGoldenAcornApp extends React.Component {
       <div>
         <Button name="Buy One" callback={this.changeValue(1)} />
         <Display>
-          {value}
+          <div>
+            {value}
+          </div>
         </Display>
         <Button name="Eat One" callback={this.changeValue(-1)} />
       </div>

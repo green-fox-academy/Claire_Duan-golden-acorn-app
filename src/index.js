@@ -1,8 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import SimpleGoldenAcornApp from './simpleGoldenAcornApp';
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import SimpleGoldenAcornApp from './simpleGoldenAcornApp';
 
-ReactDOM.render(
-  <SimpleGoldenAcornApp />,
+// ReactDOM.render(
+//   <SimpleGoldenAcornApp />,
+//   document.getElementById('root'),
+// );
+import React from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import rootReducer from './reducers/reducers';
+import App from './App';
+
+const store = createStore(rootReducer);
+
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root'),
 );
