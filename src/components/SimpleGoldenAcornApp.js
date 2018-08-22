@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from './button';
-import Display from './display';
+import Button from './Button';
+import Display from './Display';
 
 class SimpleGoldenAcornApp extends React.Component {
   constructor(props) {

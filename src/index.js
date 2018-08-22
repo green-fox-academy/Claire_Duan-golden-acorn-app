@@ -21,3 +21,12 @@ render(
   </Provider>,
   document.getElementById('root'),
 );
+
+ 
+// onKeyDown={(e) => {
+//     if (e.keyCode === 38) {
+//       document.querySelector('BuyAcorn').click();
+//     } else if (e.keyCode === 40) {
+//       document.querySelector('BuyAcorn').click();
+//     }
+//   }}
