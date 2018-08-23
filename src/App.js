@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import NavigationBar from './NavigationBar';
+import NavigationBar from './components/NavigationBar';
 
 function App(props) {
   const { children } = props;
