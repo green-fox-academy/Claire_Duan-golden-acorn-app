@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 function ArrowHandler(props) {
   const { callback, children } = props;
   return (
-    <main onKeyDown={e => callback(e)} role="presentation">
+    <div tabIndex="1" onKeyDown={callback} role="presentation"> {/*eslint-disable-line*/}
       { children }
-    </main>
+    </div>
   );
 }
 
