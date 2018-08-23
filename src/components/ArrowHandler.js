@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 function ArrowHandler(props) {
   const { callback, children } = props;
   return (
-    <div onKeyDown={e => callback(e)} role="presentation">
+    <main onKeyDown={e => callback(e)} role="presentation">
       { children }
-    </div>
+    </main>
   );
 }
 

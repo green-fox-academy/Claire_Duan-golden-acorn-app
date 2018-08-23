@@ -1,32 +1,25 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import SimpleGoldenAcornApp from './simpleGoldenAcornApp';
-
-// ReactDOM.render(
-//   <SimpleGoldenAcornApp />,
-//   document.getElementById('root'),
-// );
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import { BrowserRouter, Route } from 'react-router-dom';
+import App from './App';
+import Home from './components/Home';
+import ReduxApp from './components/ReduxApp';
 import rootReducer from './reducers/reducers';
-import App from './components/App';
+import SimpleGoldenAcornApp from './components/SimpleGoldenAcornApp';
 
 const store = createStore(rootReducer);
 
-render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+ReactDOM.render(
+  <BrowserRouter>
+    <Provider store={store}>
+      <App>
+        <Route exact path="/" component={Home} />
+        <Route path="/simple/states" component={SimpleGoldenAcornApp} />
+        <Route path="/simple/redux" component={ReduxApp} />
+      </App>
+    </Provider>
+  </BrowserRouter>,
   document.getElementById('root'),
 );
-
- 
-// onKeyDown={(e) => {
-//     if (e.keyCode === 38) {
-//       document.querySelector('BuyAcorn').click();
-//     } else if (e.keyCode === 40) {
-//       document.querySelector('BuyAcorn').click();
-//     }
-//   }}

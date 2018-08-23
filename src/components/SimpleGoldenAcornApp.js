@@ -10,16 +10,23 @@ class SimpleGoldenAcornApp extends React.Component {
     };
     this.eatOne = this.eatOne.bind(this);
     this.buyOne = this.buyOne.bind(this);
+    this.onKeyDown = this.onKeyDown.bind(this);
   }
 
   componentDidMount() {
-    document.addEventListener('keydown', (e) => {
-      if (e.keyCode === 38) {
-        this.changeValue(1)();
-      } else if (e.keyCode === 40) {
-        this.changeValue(-1)();
-      }
-    });
+    window.addEventListener('keydown', this.onKeyDown, false);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.onKeyDown, false);
+  }
+
+  onKeyDown(e) {
+    if (e.keyCode === 38) {
+      this.changeValue(1)();
+    } else if (e.keyCode === 40) {
+      this.changeValue(-1)();
+    }
   }
 
   buyOne() {
@@ -45,12 +52,9 @@ class SimpleGoldenAcornApp extends React.Component {
     const { value } = this.state;
     return (
       <div>
+        <h1>Golden Acorn Application with States</h1>
         <Button name="Buy One" callback={this.changeValue(1)} />
-        <Display>
-          <div>
-            {value}
-          </div>
-        </Display>
+        <Display amount={value} />
         <Button name="Eat One" callback={this.changeValue(-1)} />
       </div>
     );

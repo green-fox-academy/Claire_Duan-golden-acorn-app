@@ -13,6 +13,7 @@ function Button(props) {
 Button.propTypes = {
   name: PropTypes.string.isRequired,
   callback: PropTypes.func.isRequired,
+//   keyHandler: PropTypes.func.isRequired,
 };
 
 export default Button;
